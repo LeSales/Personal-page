@@ -1,10 +1,17 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import AppHeader from './components/AppHeader';
+import AppMainGrid from './components/AppMainGrid/AppMainGrid';
 
 const Title = styled.h1`
-  font-size: 50px;
+  font-size: 80px;
+  font-weight: bold;
   color: ${({ theme }) => theme.colors.primary};
 `
 
 export default function Home() {
-  return <Title>Welcome</Title>
+  return <>
+    <AppHeader></AppHeader>
+    <AppMainGrid>Welcome</AppMainGrid>
+  </>
+  
 }
