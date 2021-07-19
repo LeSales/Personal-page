@@ -8,7 +8,7 @@ export const Wrapper = styled.header`
     top: 0;
     left: 0;
     right: 0;
-    padding: 0 32px;
+    //padding: 0 32px;
     font-size: 20px;
     display: flex;
     align-items: center;

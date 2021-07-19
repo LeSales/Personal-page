@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Wrapper = styled.main`
-  width: 100wh;
+export const Wrapper = styled.div`
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #FFF;
 
   h1 {
     font-size: 75px;
