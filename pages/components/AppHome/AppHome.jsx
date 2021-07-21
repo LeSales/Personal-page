@@ -1,14 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+import bg from "../../../assets/img/bgwave.svg"
+
 
 export const Wrapper = styled.div`
-  width: 100vw;
+  width: 99vw;
   height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: #FFF;
+
+
+    background: url("../../../assets/img/wave.svg") no-repeat;
+    background-position: center start;
+    background-size: cover;
+    overflow: hidden;
+    background-blend-mode: overlay;
 
   h1 {
     font-size: 75px;

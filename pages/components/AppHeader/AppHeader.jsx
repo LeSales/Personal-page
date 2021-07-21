@@ -4,6 +4,9 @@ import styled from "styled-components"
 export const Wrapper = styled.header`
     height: 70px;
     position: fixed;
+    max-width: 99vw;
+    overflow: hidden;
+    width: 99vw;
     z-index: 999;
     top: 0;
     left: 0;
@@ -13,7 +16,7 @@ export const Wrapper = styled.header`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color : #FFF;
+    background-color : #EEE;
     color: #21211F;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 

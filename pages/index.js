@@ -17,10 +17,7 @@ const BG = styled.main`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(${bg});
-  background-size: cover;
-  background-position: center center;
-  width: 100vw;
+  width: 99vw;
 `
 
 export default function Home() {
@@ -32,6 +29,7 @@ export default function Home() {
       <AppPortfolio/>
       <AppContato/>
       <AppFooter/>
+      
     </BG>
   )
   

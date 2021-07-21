@@ -3,7 +3,8 @@ import styled from "styled-components"
 
 export const Wrapper = styled.header`
     height: 70px;
-    width: 100vw;
+    width: 99vw;
+    overflow: hidden;
     margin: 0;
     padding: 0;
     font-size: 20px;
