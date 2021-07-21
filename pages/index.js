@@ -6,6 +6,7 @@ import AppContato from './components/AppContato/AppContato';
 import AppSobre from './components/AppSobre/AppSobre';
 import AppPortfolio from './components/AppPortfolio';
 import AppFooter from './components/AppFooter';
+import AppToTopButton from './components/AppToTopButton';
 
 const Title = styled.h1`
   font-size: 80px;
@@ -29,7 +30,7 @@ export default function Home() {
       <AppPortfolio/>
       <AppContato/>
       <AppFooter/>
-      
+      <AppToTopButton/>
     </BG>
   )
   

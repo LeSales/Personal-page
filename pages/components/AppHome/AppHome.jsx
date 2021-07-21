@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
   background-color: #FFF;
 
 
-    background: url("../../../assets/img/wave.svg") no-repeat;
+    background: url("https://raw.githubusercontent.com/LeSales/Personal-page/df09055c11b851ae8012b455b7695718d8c1b1ec/assets/img/bgwave.svg") no-repeat;
     background-position: center start;
     background-size: cover;
     overflow: hidden;
