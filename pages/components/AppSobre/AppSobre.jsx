@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
 
 function AppSobre() {
   return (
-    <Wrapper>
+    <Wrapper className="sobre">
       <div className="conteiner">
         <h2>To do: Sobre</h2>
       </div>

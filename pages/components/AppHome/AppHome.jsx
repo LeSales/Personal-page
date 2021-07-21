@@ -51,7 +51,7 @@ font-weight:normal;
 
 function AppMainGrid() {
   return (
-    <Wrapper>
+    <Wrapper className="home">
       <div className="conteiner">
         <h1>Leandro Sales</h1>
         <SubName>

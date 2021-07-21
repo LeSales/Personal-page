@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
 
 function AppPortfolio() {
   return (
-    <Wrapper>
+    <Wrapper className="portfolio">
       <div className="conteiner">
         <h2>To do: Portfólio</h2>
       </div>

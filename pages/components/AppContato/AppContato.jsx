@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
 
 function AppContato() {
   return (
-    <Wrapper>
+    <Wrapper className="contato">
       <div className="conteiner">
         <h2>To do: Contato</h2>
       </div>
