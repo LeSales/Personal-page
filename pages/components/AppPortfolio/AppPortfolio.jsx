@@ -109,6 +109,17 @@ export const Wrapper = styled.div`
   .links:visited {
     color: inherit;
   }
+
+  .netflix{
+    background-position: center start;
+    background-size: cover;
+    overflow: hidden;
+    background-blend-mode: overlay;
+  }
+
+  .imagem img{
+    width: 100%;
+}
 `;
 
 function AppPortfolio() {
@@ -120,11 +131,24 @@ function AppPortfolio() {
         description={
           "Catálogo de filmes com aparência semelhante ao da Netflix."
         }
+        url={"https://github.com/LeSales/Netflix-clone-ReactJS"}
+        img={""}
+
       ></PortfolioSection>
       <div className="separator"></div>
-      <PortfolioSection></PortfolioSection>
+      <PortfolioSection
+        title={"algaShopping"}
+        description={"Lista de compras"}
+        url={"https://github.com/LeSales/desafio-react-algaworks-redux"}
+        img={""}
+      ></PortfolioSection>
       <div className="separator"></div>
-      <PortfolioSection></PortfolioSection>
+      <PortfolioSection
+        title={"Vestibulum"}
+        description={"Layout genérico, utilizando React"}
+        url={"https://github.com/LeSales/Layout-ReactJS"}
+        img={""}
+      ></PortfolioSection>
     </Wrapper>
   );
 }
@@ -133,14 +157,16 @@ function PortfolioSection(props) {
   return (
     <>
       <div className="conteiner">
-        <div className="imagem">Imagem</div>
+        <div className="imagem">
+          <img className="netflix" src={props.img} alt="Preview Image"/>
+        </div>
         <div className="infos">
           <h2>{props.title}</h2>
           <p>{props.description}</p>
           <div className="buttons">
             <Button variant="contained" className="preview">
               <a
-                href="https://github.com/LeSales/Netflix-clone-ReactJS"
+                href={props.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="links"
@@ -150,7 +176,7 @@ function PortfolioSection(props) {
             </Button>
             <Button variant="contained" className="visit">
               <a
-                href="https://github.com/LeSales/Netflix-clone-ReactJS"
+                href={props.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="links"
