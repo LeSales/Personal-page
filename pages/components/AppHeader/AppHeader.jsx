@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Sandwich from "./SandwichButton";
 
 export const Wrapper = styled.header`
   height: 70px;
@@ -38,7 +39,7 @@ export const Wrapper = styled.header`
 
   a:visited {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
   }
   a:hover {
     display: flex;
@@ -49,7 +50,7 @@ export const Wrapper = styled.header`
     border-radius: 10px;
     transition: all ease 0.3s;
   }
-  
+
   a {
     padding: 0 1rem;
     font-size: 20px;
@@ -60,6 +61,37 @@ export const Wrapper = styled.header`
   }
 `;
 
+export const SandwichButton = styled.div`
+    width:2rem;
+    height:2rem;
+    top: 25px;
+    right: 15vw;
+    z-index:20;
+    display:none;
+    @media (max-width: 680px) {
+        display:flex;
+        justify-content:space-around;
+        flex-flow:column nowrap;
+    }
+    div {
+        width: 2rem;
+        height: 0.25rem;
+        background-color:#FFF;
+        border-radius:10px;
+        transform-origin:1px;
+        transition: all 0.2s linear;
+        &:nth-child(1) {
+            transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+        }
+        &:nth-child(2) {
+            opacity: ${({ open }) => open ? '0' : '1'};
+        }
+        &:nth-child(3) {
+            transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+        }
+    }
+`
+
 function AppHeader() {
   return (
     <Wrapper>
@@ -68,36 +100,57 @@ function AppHeader() {
         <nav>
           <ul>
             <li>
-              <a href="/" onClick={ e => {
-                let home = document.querySelector(".home");
-                e.preventDefault();
-                home && home.scrollIntoView({behavior:"smooth"});
-              }}>Home</a>
+              <a
+                href="/"
+                onClick={(e) => {
+                  let home = document.querySelector(".home");
+                  e.preventDefault();
+                  home && home.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Home
+              </a>
             </li>
             <li>
-              <a href="/" onClick={ e => {
-                let sobre = document.querySelector(".sobre");
-                e.preventDefault();
-                sobre && sobre.scrollIntoView({behavior:"smooth"});
-              }}>Sobre</a>
+              <a
+                href="/"
+                onClick={(e) => {
+                  let sobre = document.querySelector(".sobre");
+                  e.preventDefault();
+                  sobre && sobre.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Sobre
+              </a>
             </li>
             <li>
-              <a href="/" onClick={ e => {
-                let portfolio = document.querySelector(".portfolio");
-                e.preventDefault();
-                portfolio && portfolio.scrollIntoView({behavior:"smooth"});
-              }}>Portfólio</a>
+              <a
+                href="/"
+                onClick={(e) => {
+                  let portfolio = document.querySelector(".portfolio");
+                  e.preventDefault();
+                  portfolio && portfolio.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Portfólio
+              </a>
             </li>
             <li>
-              <a href="/" onClick={ e => {
-                let contato = document.querySelector(".contato");
-                e.preventDefault();
-                contato && contato.scrollIntoView({behavior:"smooth"});
-              }}>Contato</a>
+              <a
+                href="/"
+                onClick={(e) => {
+                  let contato = document.querySelector(".contato");
+                  e.preventDefault();
+                  contato && contato.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Contato
+              </a>
             </li>
           </ul>
         </nav>
       </div>
+      
     </Wrapper>
   );
 }

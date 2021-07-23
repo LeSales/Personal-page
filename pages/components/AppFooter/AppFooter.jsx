@@ -27,7 +27,7 @@ export const Wrapper = styled.header`
 function AppFooter() {
   return (
       <Wrapper>
-       <div>To do: footer</div>
+       <div>Criado por Leandro Sales</div>
       </Wrapper>
   );
 }

@@ -3,8 +3,8 @@ import { useEffect } from "react";
 
 export const Wrapper = styled.div`
   background-color: #333;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   border-radius: 50px;
   position: fixed;
   right: 15px;
