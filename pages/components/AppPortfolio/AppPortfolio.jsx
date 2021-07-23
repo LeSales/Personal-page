@@ -67,7 +67,7 @@ export const Wrapper = styled.div`
     width: 100%;
     max-width: 980px;
     height: 2px;
-    background-color: #CCC;
+    background-color: #e0e0e0;
   }
   .buttons{
     display: flex;

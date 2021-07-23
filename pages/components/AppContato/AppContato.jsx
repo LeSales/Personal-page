@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import emailjs from "emailjs-com";
 import Mailer from "../AppEmailForm/AppEmailForm";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const flexCenter = `
 display:flex;
@@ -16,7 +19,7 @@ export const Wrapper = styled.div`
   color: #fff;
 
   h2 {
-    font-size: 22px;
+    font-size: 24px;
     font-style: normal;
     font-family: sans-serif;
     margin: 0;
@@ -38,6 +41,8 @@ export const Wrapper = styled.div`
     align-items: center;
     flex-direction: column;
     max-width: 980px;
+    min-height: 580px;
+    max-height: 620px;
     width: 50vw;
     height: 80vh;
     border-radius: 10px;
@@ -45,8 +50,6 @@ export const Wrapper = styled.div`
     background-color: #fff;
     color: #21211f;
   }
-
-  
 
   .redes {
     max-width: 40vw;
@@ -61,7 +64,6 @@ export const Wrapper = styled.div`
     width: 70%;
     font-weight: 500;
     color: #4d4d4d;
-    
   }
 
   .inputField {
@@ -71,7 +73,7 @@ export const Wrapper = styled.div`
     background: #fff;
     border: 1px solid #c7c7c7;
     height: 1.6rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 
   .inputSubmit {
@@ -82,7 +84,7 @@ export const Wrapper = styled.div`
     font-family: sans-serif;
     text-align: center;
     vertical-align: middle;
-    align-self:center;
+    align-self: center;
     user-select: none;
     font-size: 1rem;
     cursor: pointer;
@@ -92,8 +94,8 @@ export const Wrapper = styled.div`
 
     padding: 12px 30px;
     border-radius: 30px;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
     border-radius: 30px;
     border-style: none;
@@ -101,28 +103,66 @@ export const Wrapper = styled.div`
   }
 
   label {
-    font-family: open sans,sans-serif;
+    font-family: open sans, sans-serif;
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1px;
     color: #9c9c9c;
-    margin:0 0 5px;
+    margin: 0 0 5px;
   }
 
-
-  textarea{
+  textarea {
     line-height: 1.5;
     border: 1px solid #c7c7c7;
+    resize: none;
   }
 
-  input:focus, textarea:focus {
-  background-color:#f8f8f8;
-}
+  input:focus,
+  textarea:focus {
+    background-color: #f8f8f8;
+  }
 
-textarea:focus, input:focus{
+  textarea:focus,
+  input:focus {
     outline: none;
-}
+  }
+
+  .separator {
+    width: 60%;
+    max-width: 980px;
+    height: 2px;
+    background-color: #e0e0e0;
+    margin: 1rem 0;
+  }
+
+  .links {
+    margin: 0 10px;
+  }
+
+  .links:visited {
+    color: inherit;
+  }
 `;
+
+function sendEmail(e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_xed1lv3",
+    "template_vqcvu1n",
+    e.target,
+    "user_n9Joj17xPBlNCaRnoUhzK"
+  ).then(res=>{
+    console.log(res);
+  }).catch(err=> console.log(err));
+
+  let form = document.getElementById("myForm");
+  form.reset();
+  setTimeout(()=>{
+    alert("Mensagem enviada, obrigado pelo contato!");
+}, 300);
+
+}
 
 function AppContato() {
   return (
@@ -130,7 +170,7 @@ function AppContato() {
       <div className=".conteiner">
         <div className="formulario">
           <h2>Deixe sua mensagem</h2>
-          <form>
+          <form id="myForm" onSubmit={sendEmail}>
             <label>Nome</label>
             <input className="inputField" type="text" name="name" />
 
@@ -141,7 +181,25 @@ function AppContato() {
             <textarea name="message" rows="5" />
             <input className="inputSubmit" type="submit" value="Enviar" />
           </form>
-          
+          <div className="separator"></div>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/leandro-sales-87249059/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="links"
+            >
+              <LinkedInIcon />
+            </a>
+            <a
+              href="https://github.com/LeSales"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="links"
+            >
+              <GitHubIcon />
+            </a>
+          </div>
         </div>
       </div>
     </Wrapper>
