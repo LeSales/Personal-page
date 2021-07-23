@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
 
 const flexCenter = `
   display: flex;
@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   padding: 100px;
   font-size: 24px;
   font-family: sans-serif;
-  color:#5e5e5e;
+  color: #5e5e5e;
 
   h2 {
     font-size: 30px;
@@ -57,7 +57,7 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    color:#21211f;
+    color: #21211f;
     width: 50vw;
     height: 40vh;
     margin: 0 50px;
@@ -69,65 +69,95 @@ export const Wrapper = styled.div`
     height: 2px;
     background-color: #e0e0e0;
   }
-  .buttons{
+  .buttons {
     display: flex;
     width: 80%;
     height: 15%;
     justify-content: space-evenly;
   }
 
-  .preview{
+  .preview {
     min-width: 80px;
     width: 35%;
     background-color: #21211f;
     border-radius: 30px;
-    color: #FFF;
+    color: #fff;
   }
 
-  .preview:hover{
+  .preview:hover {
     background-color: #3f3e3e;
   }
 
-  .visit{
+  .visit {
     min-width: 80px;
     width: 35%;
-    background-color: #FFF;
+    background-color: #fff;
     border-radius: 30px;
     color: #21211f;
     border: 1px solid #21211f;
   }
 
-  .visit:hover{
+  .visit:hover {
     background-color: #21211f;
-    color:#FFF;
+    color: #fff;
+  }
+
+  .links {
+    text-decoration: none;
+  }
+
+  .links:visited {
+    color: inherit;
   }
 `;
 
 function AppPortfolio() {
   return (
-  <Wrapper className="portfolio">
-    Portfólio
-    <PortfolioSection title={"Teste Title"} description={"test Description"}></PortfolioSection>
-    <div className="separator"></div>
-    <PortfolioSection></PortfolioSection>
-    <div className="separator"></div>
-    <PortfolioSection></PortfolioSection>
-  </Wrapper>);
+    <Wrapper className="portfolio">
+      Portfólio
+      <PortfolioSection
+        title={"Netflix clone"}
+        description={
+          "Catálogo de filmes com aparência semelhante ao da Netflix."
+        }
+      ></PortfolioSection>
+      <div className="separator"></div>
+      <PortfolioSection></PortfolioSection>
+      <div className="separator"></div>
+      <PortfolioSection></PortfolioSection>
+    </Wrapper>
+  );
 }
 
 function PortfolioSection(props) {
   return (
     <>
       <div className="conteiner">
-        <div className="imagem">
-          Imagem
-        </div>
+        <div className="imagem">Imagem</div>
         <div className="infos">
           <h2>{props.title}</h2>
           <p>{props.description}</p>
           <div className="buttons">
-          <Button variant="contained" className="preview">Preview</Button>
-          <Button variant="contained" className="visit">Visit</Button>
+            <Button variant="contained" className="preview">
+              <a
+                href="https://github.com/LeSales/Netflix-clone-ReactJS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="links"
+              >
+                Preview
+              </a>
+            </Button>
+            <Button variant="contained" className="visit">
+              <a
+                href="https://github.com/LeSales/Netflix-clone-ReactJS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="links"
+              >
+                Visit
+              </a>
+            </Button>
           </div>
         </div>
       </div>

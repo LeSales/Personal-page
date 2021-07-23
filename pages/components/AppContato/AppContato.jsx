@@ -139,6 +139,10 @@ export const Wrapper = styled.div`
     margin: 0 10px;
   }
 
+  .links:hover{
+    color: #616161 !important;
+  }
+
   .links:visited {
     color: inherit;
   }
@@ -189,7 +193,7 @@ function AppContato() {
               rel="noopener noreferrer"
               className="links"
             >
-              <LinkedInIcon />
+              <LinkedInIcon style={{fontSize:30}}/>
             </a>
             <a
               href="https://github.com/LeSales"
@@ -197,7 +201,7 @@ function AppContato() {
               rel="noopener noreferrer"
               className="links"
             >
-              <GitHubIcon />
+              <GitHubIcon style={{fontSize:30}}/>
             </a>
           </div>
         </div>
