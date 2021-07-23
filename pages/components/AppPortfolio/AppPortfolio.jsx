@@ -46,8 +46,8 @@ export const Wrapper = styled.div`
 
   .imagem {
     ${flexCenter}
-    width: 50vw;
-    height: 40vh;
+    max-width:40%;
+    max-height:40%;
     border-radius: 10px;
     border: 1px solid #21211f;
     margin: 0 50px;
@@ -118,7 +118,9 @@ export const Wrapper = styled.div`
   }
 
   .imagem img{
-    width: 100%;
+    max-width:100%;
+    max-height:100%;
+    border-radius: 10px;
 }
 `;
 
@@ -132,7 +134,7 @@ function AppPortfolio() {
           "Catálogo de filmes com aparência semelhante ao da Netflix."
         }
         url={"https://github.com/LeSales/Netflix-clone-ReactJS"}
-        img={""}
+        img={"https://raw.githubusercontent.com/LeSales/Personal-page/main/assets/img/netflix.PNG"}
 
       ></PortfolioSection>
       <div className="separator"></div>
@@ -140,14 +142,14 @@ function AppPortfolio() {
         title={"algaShopping"}
         description={"Lista de compras"}
         url={"https://github.com/LeSales/desafio-react-algaworks-redux"}
-        img={""}
+        img={"https://raw.githubusercontent.com/LeSales/Personal-page/main/assets/img/algaShopping.PNG"}
       ></PortfolioSection>
       <div className="separator"></div>
       <PortfolioSection
         title={"Vestibulum"}
         description={"Layout genérico, utilizando React"}
         url={"https://github.com/LeSales/Layout-ReactJS"}
-        img={""}
+        img={"https://raw.githubusercontent.com/LeSales/Personal-page/main/assets/img/vesdtibulum.PNG"}
       ></PortfolioSection>
     </Wrapper>
   );
