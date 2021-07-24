@@ -18,7 +18,8 @@ const BG = styled.main`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 99vw;
+  width: 100vw;
+  max-width: 100vw;
 `
 
 export default function Home() {

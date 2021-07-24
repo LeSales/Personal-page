@@ -8,7 +8,7 @@ const flexCenter = `
   `;
 
 export const Wrapper = styled.div`
-  width: 99vw;
+  width: 100vw;
   min-height: 100vh;
   ${flexCenter}
   flex-direction: row;
@@ -52,7 +52,7 @@ export const Wrapper = styled.div`
 
   .sobre-image {
     ${flexCenter}
-    width: 50vw;
+    width: 100px;
     min-width: 400px;
     height: 60vh;
     min-height: 300px;

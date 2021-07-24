@@ -9,21 +9,25 @@ const flexCenter = `
 `;
 
 export const Wrapper = styled.div`
-  width: 99vw;
+  width: 100vw;
   min-height: 100vh;
   ${flexCenter}
   flex-direction: column;
   background-color: #fff;
-  padding: 100px;
+  //padding: 100px;
   font-size: 24px;
   font-family: sans-serif;
   color: #5e5e5e;
 
   h2 {
-    font-size: 30px;
+    font-size: 2.5rem;
     font-style: normal;
     font-family: sans-serif;
     margin: 0;
+  }
+
+  p{
+    font-size: 2rem;
   }
 
   .conteiner {
@@ -46,8 +50,9 @@ export const Wrapper = styled.div`
 
   .imagem {
     ${flexCenter}
-    max-width:40%;
-    max-height:40%;
+    min-width: 350px;
+    max-width: 430px;
+    width: 30vw;
     border-radius: 10px;
     border: 1px solid #21211f;
     margin: 0 50px;

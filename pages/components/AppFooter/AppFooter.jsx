@@ -17,6 +17,7 @@ export const Wrapper = styled.header`
 
     div{
         max-width: 980px;
+        font-size: 1.6rem;
         width: 100vw;
         display: flex;
         align-items: center;

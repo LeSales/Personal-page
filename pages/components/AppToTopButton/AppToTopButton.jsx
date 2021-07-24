@@ -1,19 +1,24 @@
 import styled from "styled-components";
 import { useEffect } from "react";
+import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 
 export const Wrapper = styled.div`
   background-color: #333;
-  width: 10px;
-  height: 10px;
+  width: 50px;
+  height: 50px;
   border-radius: 50px;
   position: fixed;
   right: 15px;
   bottom: 15px;
-  padding: 20px;
+  //padding: 20px;
   cursor: pointer;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const icone = `
+  
 `;
 
 function AppToTopButton() {
@@ -27,7 +32,11 @@ function AppToTopButton() {
     };
   });
 
-  return <Wrapper className="topo" onClick={() => toTop()}></Wrapper>;
+  return (
+  <Wrapper className="topo" onClick={() => toTop()}>
+    <ArrowDropUpIcon style={{fontSize:50, color:"#979797"}}/>
+  </Wrapper>
+  );
 }
 
 function toTop() {

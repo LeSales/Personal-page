@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import Sandwich from "./SandwichButton";
 
 export const Wrapper = styled.header`
   height: 70px;
   position: fixed;
-  max-width: 99vw;
+  max-width: 100vw;
   overflow: hidden;
-  width: 99vw;
+  width: 100vw;
   z-index: 999;
   top: 0;
   left: 0;
@@ -23,7 +22,7 @@ export const Wrapper = styled.header`
 
   div {
     max-width: 980px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;

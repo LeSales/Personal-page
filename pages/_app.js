@@ -7,6 +7,17 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     overflow-y: scroll; 
     overflow-x: hidden;
+
+    height: 100vh;
+    font-size: 1.6rem;
+    background-color:whitesmoke;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    font-family:sans-serif;
+  }
+
+  html{
+    font-size: 62.5%;
   }
 `
 

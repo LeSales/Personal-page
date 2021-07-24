@@ -13,7 +13,7 @@ align-items:center;
 
 export const Wrapper = styled.div`
   ${flexCenter}
-  width: 99vw;
+  width: 100vw;
   min-height: 100vh;
   background-color: #21211f;
   color: #fff;
