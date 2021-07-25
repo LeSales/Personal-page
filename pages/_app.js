@@ -10,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
 
     height: 100vh;
     font-size: 1.6rem;
-    background-color:whitesmoke;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
     font-family:sans-serif;
@@ -18,6 +17,12 @@ const GlobalStyle = createGlobalStyle`
 
   html{
     font-size: 62.5%;
+  }
+
+  @media (max-width: 768px) {
+    html{
+      font-size:50%;
+    }
   }
 `
 

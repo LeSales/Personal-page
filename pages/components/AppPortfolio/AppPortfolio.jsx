@@ -26,46 +26,40 @@ export const Wrapper = styled.div`
     margin: 0;
   }
 
-  p{
+  p {
     font-size: 2rem;
   }
 
   .conteiner {
     ${flexCenter}
     max-width: 980px;
-    margin: 50px 0;
+    margin: 5rem 0;
     display: flex;
-    padding: 16px;
-  }
-
-  .conteiner h2 {
-    height: 15%;
-    padding: 15px;
   }
 
   .conteiner p {
-    height: 55%;
-    padding-left: 20px;
+    text-align: center;
   }
 
   .imagem {
     ${flexCenter}
-    min-width: 350px;
-    max-width: 430px;
-    width: 30vw;
+    justify-content: space-between;
+    //max-width: 430px;
+    width: 50vw;
     border-radius: 10px;
     border: 1px solid #21211f;
-    margin: 0 50px;
+    //margin: 0 5rem;
   }
 
   .infos {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
+    align-items: center;
     flex-direction: column;
     color: #21211f;
-    width: 50vw;
+    width: 25vw;
     height: 40vh;
-    margin: 0 50px;
+    padding: 0 5rem;
   }
 
   .separator {
@@ -76,14 +70,18 @@ export const Wrapper = styled.div`
   }
   .buttons {
     display: flex;
-    width: 80%;
+    width: 100%;
     height: 15%;
     justify-content: space-evenly;
   }
 
+  .btn {
+    max-width: 5rem;
+  }
+
   .preview {
-    min-width: 80px;
-    width: 35%;
+    font-size: 1.2rem;
+    min-width: 12rem;
     background-color: #21211f;
     border-radius: 30px;
     color: #fff;
@@ -94,8 +92,8 @@ export const Wrapper = styled.div`
   }
 
   .visit {
-    min-width: 80px;
-    width: 35%;
+    font-size: 1.2rem;
+    min-width: 12rem;
     background-color: #fff;
     border-radius: 30px;
     color: #21211f;
@@ -108,30 +106,40 @@ export const Wrapper = styled.div`
   }
 
   .links {
+    ${flexCenter}
     text-decoration: none;
+    height: 3.5rem;
   }
 
   .links:visited {
     color: inherit;
   }
 
-  .netflix{
-    background-position: center start;
-    background-size: cover;
-    overflow: hidden;
-    background-blend-mode: overlay;
+  .imagem img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
   }
 
-  .imagem img{
-    max-width:100%;
-    max-height:100%;
-    border-radius: 10px;
-}
+  @media (max-width: 768px) {
+    .conteiner {
+      flex-direction: column;
+    }
+    .infos {
+      min-width: 90vw;
+      padding: 0;
+    }
+    .imagem {
+      min-width: 90vw;
+      margin: 0;
+      padding: 0;
+    }
+  }
 `;
 
 function AppPortfolio() {
   return (
-    <Wrapper className="portfolio">
+    <Wrapper className="portfolio" style={{ marginTop: 50 }}>
       Portfólio
       <PortfolioSection
         title={"Netflix clone"}
@@ -139,22 +147,27 @@ function AppPortfolio() {
           "Catálogo de filmes com aparência semelhante ao da Netflix."
         }
         url={"https://github.com/LeSales/Netflix-clone-ReactJS"}
-        img={"https://raw.githubusercontent.com/LeSales/Personal-page/main/assets/img/netflix.PNG"}
-
+        img={
+          "https://raw.githubusercontent.com/LeSales/Personal-page/main/assets/img/netflix.PNG"
+        }
       ></PortfolioSection>
       <div className="separator"></div>
       <PortfolioSection
         title={"algaShopping"}
         description={"Lista de compras"}
         url={"https://github.com/LeSales/desafio-react-algaworks-redux"}
-        img={"https://raw.githubusercontent.com/LeSales/Personal-page/main/assets/img/algaShopping.PNG"}
+        img={
+          "https://raw.githubusercontent.com/LeSales/Personal-page/main/assets/img/algaShopping.PNG"
+        }
       ></PortfolioSection>
       <div className="separator"></div>
       <PortfolioSection
         title={"Vestibulum"}
         description={"Layout genérico, utilizando React"}
         url={"https://github.com/LeSales/Layout-ReactJS"}
-        img={"https://raw.githubusercontent.com/LeSales/Personal-page/main/assets/img/vesdtibulum.PNG"}
+        img={
+          "https://raw.githubusercontent.com/LeSales/Personal-page/main/assets/img/vesdtibulum.PNG"
+        }
       ></PortfolioSection>
     </Wrapper>
   );
@@ -165,32 +178,33 @@ function PortfolioSection(props) {
     <>
       <div className="conteiner">
         <div className="imagem">
-          <img className="netflix" src={props.img} alt="Preview Image"/>
+          <img className="netflix" src={props.img} alt="Preview Image" />
         </div>
         <div className="infos">
           <h2>{props.title}</h2>
           <p>{props.description}</p>
           <div className="buttons">
-            <Button variant="contained" className="preview">
-              <a
-                href={props.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="links"
-              >
+            <a
+              href={props.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="links"
+            >
+              <Button variant="contained" className="preview">
                 Preview
-              </a>
-            </Button>
-            <Button variant="contained" className="visit">
-              <a
-                href={props.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="links"
-              >
+              </Button>
+            </a>
+
+            <a
+              href={props.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="links"
+            >
+              <Button variant="contained" className="visit">
                 Visit
-              </a>
-            </Button>
+              </Button>
+            </a>
           </div>
         </div>
       </div>

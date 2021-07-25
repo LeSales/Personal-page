@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import AppHeader from './components/AppHeader';
 import AppHome from './components/AppHome/AppHome';
-import bg from '../assets/img/bgwave.svg'
 import AppContato from './components/AppContato/AppContato';
 import AppSobre from './components/AppSobre/AppSobre';
 import AppPortfolio from './components/AppPortfolio';

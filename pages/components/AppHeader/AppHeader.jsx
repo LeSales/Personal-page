@@ -20,6 +20,15 @@ export const Wrapper = styled.header`
   color: #21211f;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+  @media (max-width:768px) {
+    .menu {
+      display:none;
+    }
+    h2 {
+      padding: 0 3rem;
+    }
+  }
+
   div {
     max-width: 980px;
     width: 100%;
@@ -29,6 +38,7 @@ export const Wrapper = styled.header`
   }
   h2 {
     font-family: sans-serif;
+    //padding: 0 2rem;
   }
   ul {
     display: flex;
@@ -97,7 +107,7 @@ function AppHeader() {
       <div>
         <h2>Bem vindo</h2>
         <nav>
-          <ul>
+          <ul className="menu">
             <li>
               <a
                 href="/"

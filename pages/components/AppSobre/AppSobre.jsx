@@ -15,13 +15,14 @@ export const Wrapper = styled.div`
   background-color: #21211f;
   color: #fff;
 
+  
+
   .conteiner {
     ${flexCenter}
     gap: 10px;
-    flex-direction: row;
+    //flex-direction: row;
     //color: #000;
     max-width: 980px;
-
   }
 
   h2 {
@@ -29,13 +30,13 @@ export const Wrapper = styled.div`
     font-style: normal;
     font-family: sans-serif;
     margin: 0;
-    padding:0 20px;
+    padding: 0 20px;
   }
 
   p {
     font-family: sans-serif;
     font-size: 20px;
-    padding:0 20px;
+    padding: 0 20px;
   }
 
   .sobre-text {
@@ -43,19 +44,32 @@ export const Wrapper = styled.div`
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    width: 50vw;
-    margin:2rem;
-    min-width: 400px;
-    height: 60vh;
+    width: 55%;
+    margin: 2rem;
     min-height: 300px;
   }
 
   .sobre-image {
     ${flexCenter}
     width: 100px;
-    min-width: 400px;
-    height: 60vh;
+    width: 45%;
     min-height: 300px;
+  }
+
+  @media (max-width: 768px) {
+    .conteiner {
+      display: flex;
+      flex-direction: column;
+      max-width: 80vw;
+    }
+
+    .sobre-image {
+      order: -1;
+      width: 90vw;
+    }
+    .sobre-text {
+      width: 90vw;
+    }
   }
 `;
 
@@ -66,11 +80,11 @@ function AppSobre() {
         <div className="sobre-text">
           <h2>Olá,</h2>
           <p>
-          Mussum Ipsum, cacilds vidis litro abertis. 
-          Suco de cevadiss deixa as pessoas mais interessantis. 
-          Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. 
-          Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, 
-          eget. Paisis, filhis, espiritis santis.
+            Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa as
+            pessoas mais interessantis. Tá deprimidis, eu conheço uma cachacis
+            que pode alegrar sua vidis. Praesent vel viverra nisi. Mauris
+            aliquet nunc non turpis scelerisque, eget. Paisis, filhis, espiritis
+            santis.
           </p>
         </div>
         <div className="sobre-image">To do: imagem</div>

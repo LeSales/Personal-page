@@ -18,6 +18,8 @@ export const Wrapper = styled.div`
   background-color: #21211f;
   color: #fff;
 
+  
+
   h2 {
     font-size: 2.4rem;
     font-style: normal;
@@ -33,15 +35,14 @@ export const Wrapper = styled.div`
     flex-direction: column;
     max-width: 980px;
     height: 100%;
-    background-color: #ad4e4e;
   }
   .formulario {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    min-width:600px;
     max-width: 980px;
-    min-height: 580px;
     max-height: 620px;
     width: 50vw;
     height: 80vh;
@@ -49,13 +50,6 @@ export const Wrapper = styled.div`
     font-family: sans-serif;
     background-color: #fff;
     color: #21211f;
-  }
-
-  .redes {
-    max-width: 40vw;
-    width: 50vw;
-    height: 70%;
-    background-color: #832727;
   }
 
   form {
@@ -78,7 +72,8 @@ export const Wrapper = styled.div`
 
   .inputSubmit {
     margin: 15px 0;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     width: 30%;
     font-weight: 500;
     font-family: sans-serif;
@@ -112,7 +107,7 @@ export const Wrapper = styled.div`
   }
 
   textarea {
-    line-height: 1.5;
+    line-height: 1.5rem;
     border: 1px solid #c7c7c7;
     resize: none;
   }
@@ -145,6 +140,13 @@ export const Wrapper = styled.div`
 
   .links:visited {
     color: inherit;
+  }
+
+  @media (max-width: 768px){
+    .formulario{
+      min-width: 90vw;
+    }
+    
   }
 `;
 
