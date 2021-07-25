@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import bg from "../../../assets/img/bgwave.svg";
 
 export const Wrapper = styled.div`
   width: 99vw;
@@ -55,6 +54,7 @@ export const SubName = styled.div`
 
   @media (max-width: 475px) {
     margin-top: -10px;
+    margin-left: 2px;
     .nome {
       font-size: 5rem;
     }

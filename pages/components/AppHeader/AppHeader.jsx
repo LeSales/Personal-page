@@ -11,7 +11,6 @@ export const Wrapper = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  //padding: 0 32px;
   font-size: 2rem;
   display: flex;
   align-items: center;
@@ -38,7 +37,6 @@ export const Wrapper = styled.header`
   }
   h2 {
     font-family: sans-serif;
-    //padding: 0 2rem;
   }
   ul {
     display: flex;

@@ -42,7 +42,7 @@ export const Wrapper = styled.div`
     align-items: center;
     flex-direction: column;
     min-width:600px;
-    max-width: 980px;
+    max-width: 750px;
     max-height: 620px;
     width: 50vw;
     height: 80vh;
