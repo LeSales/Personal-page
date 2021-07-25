@@ -7,7 +7,7 @@ export const Wrapper = styled.header`
     overflow: hidden;
     margin: 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 1.6rem;
     display: flex;
     align-items: center;
     justify-content: center;

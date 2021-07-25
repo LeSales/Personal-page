@@ -12,7 +12,7 @@ export const Wrapper = styled.header`
   left: 0;
   right: 0;
   //padding: 0 32px;
-  font-size: 20px;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +22,7 @@ export const Wrapper = styled.header`
 
   div {
     max-width: 980px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,7 +52,7 @@ export const Wrapper = styled.header`
 
   a {
     padding: 0 1rem;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
     font-family: sans-serif;
     cursor: pointer;
@@ -149,7 +149,6 @@ function AppHeader() {
           </ul>
         </nav>
       </div>
-      
     </Wrapper>
   );
 }

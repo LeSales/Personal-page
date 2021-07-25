@@ -21,7 +21,7 @@ export const Wrapper = styled.div`
     background-blend-mode: overlay;
 
   h1 {
-    font-size: 75px;
+    font-size: 7.5rem;
     font-weight: 900;
     font-style: normal;
     font-family: sans-serif;

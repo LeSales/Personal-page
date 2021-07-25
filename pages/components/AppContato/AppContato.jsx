@@ -13,13 +13,13 @@ align-items:center;
 
 export const Wrapper = styled.div`
   ${flexCenter}
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background-color: #21211f;
   color: #fff;
 
   h2 {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-style: normal;
     font-family: sans-serif;
     margin: 0;
@@ -105,7 +105,7 @@ export const Wrapper = styled.div`
   label {
     font-family: open sans, sans-serif;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     color: #9c9c9c;
     margin: 0 0 5px;

@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   background-color: #fff;
   //padding: 100px;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-family: sans-serif;
   color: #5e5e5e;
 
