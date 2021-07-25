@@ -12,6 +12,8 @@ Para auxiliar no desenvolvimento foram utilizadas as seguintes bibliotecas:
     - Utilizada no formulário de contato, possibilitando o envio de e-mails sem necessidade da implementação dessa funcionalidade no backend.
   - material-ui
     - Utilizada para adição dos ícones de redes sociais e botões
+  - react-icons
+    - Utilizada para adição dos ícones de tecnologias na área "Sobre"
 
 ## Preview
 Uma previsão do projeto está hospedada na plataforma Vercel, que pode ser acessado através do seguinte link:
