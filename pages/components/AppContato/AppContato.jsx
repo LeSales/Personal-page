@@ -148,6 +148,10 @@ export const Wrapper = styled.div`
     }
     
   }
+  a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
 `;
 
 function sendEmail(e) {

@@ -44,10 +44,6 @@ export const Wrapper = styled.header`
     list-style: none;
   }
 
-  a:visited {
-    text-decoration: none;
-    color: inherit;
-  }
   a:hover {
     display: flex;
     justify-content: center;
@@ -57,7 +53,7 @@ export const Wrapper = styled.header`
     border-radius: 10px;
     transition: all ease 0.3s;
   }
-
+  
   a {
     padding: 0 1rem;
     font-size: 2rem;
@@ -66,6 +62,15 @@ export const Wrapper = styled.header`
     cursor: pointer;
     text-decoration: none;
   }
+  a:visited {
+  text-decoration: none;
+  color: inherit;
+  }
+
+  a, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
 `;
 
 export const SandwichButton = styled.div`
