@@ -28,6 +28,7 @@ export const Wrapper = styled.div`
     gap: 10px;
     flex-direction: column;
     max-width: 980px;
+    padding-bottom: 5rem;
   }
 
   h2 {
@@ -56,16 +57,22 @@ export const Wrapper = styled.div`
 
   .sobre-image {
     display: grid;
-    width: 90%;
     max-width: 980px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     grid-gap: 1rem;
-    min-height: 300px;
+    min-height: 100px;
   }
 
   .card-item {
     ${flexCenter}
-    min-width: 100px;
+    justify-self: center;
+    margin-bottom: 3rem;
+    width: 11rem;
+    height: 11rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
   }
 
   .html-icon {
@@ -81,6 +88,7 @@ export const Wrapper = styled.div`
 
     .sobre-image {
       width: 90vw;
+      grid-gap: 0;
     }
     .sobre-text {
       width: 90vw;
@@ -113,8 +121,8 @@ function AppSobre() {
             Gosto de artes, de criar coisas novas e assistir séries com as
             pessoas que amo. <br />
             <br />
-            Sou uma pessoa de família e gosto de estar perto e interagir com pessoas
-            positivas.
+            Sou uma pessoa de família e gosto de estar perto e interagir com
+            pessoas positivas.
           </p>
         </div>
         <div className="sobre-image">
