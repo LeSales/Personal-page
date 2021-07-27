@@ -78,9 +78,7 @@ export const Wrapper = styled.div`
     font-weight: 500;
     font-family: sans-serif;
     text-align: center;
-    vertical-align: middle;
     align-self: center;
-    user-select: none;
     font-size: 1rem;
     cursor: pointer;
     color: #fff;
@@ -88,10 +86,6 @@ export const Wrapper = styled.div`
     border-color: #21211f;
 
     padding: 12px 30px;
-    border-radius: 30px;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
     border-radius: 30px;
     border-style: none;
     border: 1px solid #9c9c9c;
@@ -169,8 +163,8 @@ function sendEmail(e) {
   let form = document.getElementById("myForm");
   form.reset();
   setTimeout(()=>{
-    alert("Mensagem enviada, obrigado pelo contato!");
-}, 300);
+    //alert("Mensagem enviada, obrigado pelo contato!");
+}, 10);
 
 }
 
@@ -182,13 +176,13 @@ function AppContato() {
           <h2>Deixe sua mensagem</h2>
           <form id="myForm" onSubmit={sendEmail}>
             <label>Nome</label>
-            <input className="inputField" type="text" name="name" />
+            <input className="inputField" type="text" name="name" required />
 
             <label>E-mail</label>
-            <input className="inputField" type="email" name="user_email" />
+            <input className="inputField" type="email" name="user_email" required />
 
             <label>Mensagem</label>
-            <textarea name="message" rows="5" />
+            <textarea name="message" rows="5" required/>
             <input className="inputSubmit" type="submit" value="Enviar" />
           </form>
           <div className="separator"></div>

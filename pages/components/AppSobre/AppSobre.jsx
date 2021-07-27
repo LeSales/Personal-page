@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
     gap: 10px;
     flex-direction: column;
     max-width: 980px;
-    padding-bottom: 5rem;
+    padding: 5rem;
   }
 
   h2 {
@@ -41,8 +41,14 @@ export const Wrapper = styled.div`
 
   p {
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 2rem;
     padding: 0 20px;
+  }
+  .subtitle{
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    padding: 0;
+    padding-left:20px;
   }
 
   .sobre-text {
@@ -61,6 +67,7 @@ export const Wrapper = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     grid-gap: 1rem;
     min-height: 100px;
+    padding: 5rem 0;
   }
 
   .card-item {
@@ -124,6 +131,31 @@ function AppSobre() {
             Sou uma pessoa de família e gosto de estar perto e interagir com
             pessoas positivas.
           </p>
+          <h3 style={{paddingLeft:20, paddingTop:"3rem", fontSize:"2.5rem"}}>Experiências</h3>
+          <p>Desenvolvedor Front-end - Autônomo</p>
+          <p className="subtitle">Desenvolvimento Front-end com as seguintes tecnologias:</p>
+          <ul>
+            <li>React (Hooks e styled-components)</li>
+            <li>React Native</li>
+            <li>JavaScript</li>
+            <li>HTML5</li>
+            <li>CSS3 (SASS)</li>
+            <li>Git</li>
+          </ul>
+          <p className="subtitle">Criação de Layouts com as ferramentas:</p>
+          <ul>
+            <li>Adobe XD</li>
+            <li>Figma</li>
+          </ul>
+
+          <p>Desenvolvedor mobile - CrossSystem Tecnologia da Informação (Estágio)</p>
+          <p className="subtitle">01/20 - 10/20</p>
+          <p className="subtitle">Desenvolvimento de aplicativos utilizando React Native com expo</p>
+          <ul>
+            <li>Criação de novas funcionalidades</li>
+            <li>Manutenção e atualização de funcionalidades já implementadas</li>
+            <li>Criação de layouts mobile e web através das ferramentas Adobe XD e Figma</li>
+          </ul>
         </div>
         <div className="sobre-image">
           <div className="card-item">
