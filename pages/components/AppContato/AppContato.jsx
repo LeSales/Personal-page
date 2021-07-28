@@ -18,8 +18,6 @@ export const Wrapper = styled.div`
   background-color: #21211f;
   color: #fff;
 
-  
-
   h2 {
     font-size: 2.4rem;
     font-style: normal;
@@ -171,7 +169,7 @@ function sendEmail(e) {
 function AppContato() {
   return (
     <Wrapper className="contato">
-      <div className=".conteiner">
+      <div className="conteiner">
         <div className="formulario">
           <h2>Deixe sua mensagem</h2>
           <form id="myForm" onSubmit={sendEmail}>

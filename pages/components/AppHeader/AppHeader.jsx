@@ -19,9 +19,9 @@ export const Wrapper = styled.header`
   color: #21211f;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     .menu {
-      display:none;
+      display: none;
     }
     h2 {
       padding: 0 3rem;
@@ -44,6 +44,26 @@ export const Wrapper = styled.header`
     list-style: none;
   }
 
+  a {
+    padding: 0 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    color: #21211f;
+  }
+  a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:focus,
+  a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+
   a:hover {
     display: flex;
     justify-content: center;
@@ -53,56 +73,38 @@ export const Wrapper = styled.header`
     border-radius: 10px;
     transition: all ease 0.3s;
   }
-  
-  a {
-    padding: 0 1rem;
-    font-size: 2rem;
-    font-weight: 700;
-    font-family: sans-serif;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  a:visited {
-  text-decoration: none;
-  color: inherit;
-  }
-
-  a, a:focus, a:active {
-      text-decoration: none;
-      color: inherit;
- }
 `;
 
 export const SandwichButton = styled.div`
-    width:2rem;
-    height:2rem;
-    top: 25px;
-    right: 15vw;
-    z-index:20;
-    display:none;
-    @media (max-width: 680px) {
-        display:flex;
-        justify-content:space-around;
-        flex-flow:column nowrap;
+  width: 2rem;
+  height: 2rem;
+  top: 25px;
+  right: 15vw;
+  z-index: 20;
+  display: none;
+  @media (max-width: 680px) {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+  }
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #fff;
+    border-radius: 10px;
+    transform-origin: 1px;
+    transition: all 0.2s linear;
+    &:nth-child(1) {
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
-    div {
-        width: 2rem;
-        height: 0.25rem;
-        background-color:#FFF;
-        border-radius:10px;
-        transform-origin:1px;
-        transition: all 0.2s linear;
-        &:nth-child(1) {
-            transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
-        }
-        &:nth-child(2) {
-            opacity: ${({ open }) => open ? '0' : '1'};
-        }
-        &:nth-child(3) {
-            transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
-        }
+    &:nth-child(2) {
+      opacity: ${({ open }) => (open ? "0" : "1")};
     }
-`
+    &:nth-child(3) {
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+    }
+  }
+`;
 
 function AppHeader() {
   return (
