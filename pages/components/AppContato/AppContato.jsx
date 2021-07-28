@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import emailjs from "emailjs-com";
-import Mailer from "../AppEmailForm/AppEmailForm";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
