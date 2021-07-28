@@ -68,4 +68,4 @@ function sendEmail(e) {
   }
   
 
-export default Mailer;
+//export default Mailer;
