@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Button from "@material-ui/core/Button";
 
+import { projects } from "../../../utils/portfolioInfo";
+
 const flexCenter = `
   display: flex;
   align-items: center;
@@ -136,38 +138,23 @@ export const Wrapper = styled.div`
   }
 `;
 
+const portfolioList = projects.map((e, i) => (
+  <PortfolioSection
+    key={i}
+    title={e.title}
+    description={e.description}
+    url={e.url}
+    img={e.img}
+  />
+));
+
+console.log(portfolioList);
+
 function AppPortfolio() {
   return (
     <Wrapper className="portfolio" style={{ marginTop: 50 }}>
       Portfólio
-      <PortfolioSection
-        title={"Netflix clone"}
-        description={
-          "Catálogo de filmes com aparência semelhante ao da Netflix."
-        }
-        url={"https://github.com/LeSales/Netflix-clone-ReactJS"}
-        img={
-          "https://raw.githubusercontent.com/LeSales/Personal-page/main/assets/img/netflix.PNG"
-        }
-      ></PortfolioSection>
-      <div className="separator"></div>
-      <PortfolioSection
-        title={"algaShopping"}
-        description={"Lista de compras"}
-        url={"https://github.com/LeSales/desafio-react-algaworks-redux"}
-        img={
-          "https://raw.githubusercontent.com/LeSales/Personal-page/main/assets/img/algaShopping.PNG"
-        }
-      ></PortfolioSection>
-      <div className="separator"></div>
-      <PortfolioSection
-        title={"Vestibulum"}
-        description={"Layout genérico, utilizando React"}
-        url={"https://github.com/LeSales/Layout-ReactJS"}
-        img={
-          "https://raw.githubusercontent.com/LeSales/Personal-page/main/assets/img/vesdtibulum.PNG"
-        }
-      ></PortfolioSection>
+      {portfolioList}
     </Wrapper>
   );
 }
