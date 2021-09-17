@@ -9,6 +9,10 @@ import {
   DiGit,
 } from "react-icons/di";
 
+import {
+  SiFlutter
+} from "react-icons/si";
+
 const flexCenter = `
   display: flex;
   justify-content: center;
@@ -113,7 +117,7 @@ function AppSobre() {
             <br />
             sou Leandro Sales,
             <br />
-            Desenvolvedor Front-end.
+            Desenvolvedor Front-end e Mobile.
           </h2>
           <p>
             Sou do Rio de Janeiro, graduando em Ciência da Computação.
@@ -132,11 +136,13 @@ function AppSobre() {
             pessoas positivas.
           </p>
           <h3 style={{paddingLeft:20, paddingTop:"3rem", fontSize:"2.5rem"}}>Experiências</h3>
-          <p>Desenvolvedor Front-end - Autônomo</p>
+          <p>Desenvolvedor Front-end e Mobile - Autônomo</p>
           <p className="subtitle">Desenvolvimento Front-end com as seguintes tecnologias:</p>
           <ul>
             <li>React (Hooks e styled-components)</li>
             <li>React Native</li>
+            <li>Dart</li>
+            <li>Flutter</li>
             <li>JavaScript</li>
             <li>HTML5</li>
             <li>CSS3 (SASS)</li>
@@ -175,6 +181,9 @@ function AppSobre() {
           </div>
           <div className="card-item">
             <DiSass className="html-icon" />
+          </div>
+          <div className="card-item">
+            <SiFlutter className="html-icon" />
           </div>
         </div>
       </div>
