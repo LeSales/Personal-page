@@ -47,6 +47,9 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     //max-width: 430px;
     width: 50vw;
+    min-height: 40vh;
+    max-height: 50vh;
+    background-size: cover;
     border-radius: 10px;
     border: 1px solid #21211f;
     //margin: 0 5rem;
@@ -116,9 +119,10 @@ export const Wrapper = styled.div`
     color: inherit;
   }
 
-  .imagem img {
-    max-width: 100%;
-    max-height: 100%;
+  .imagem-content {
+    width: 100%;
+    height: auto;
+    object-fit: scale-down;
     border-radius: 10px;
   }
 
@@ -164,7 +168,7 @@ function PortfolioSection(props) {
     <>
       <div className="conteiner">
         <div className="imagem">
-          <img className="netflix" src={props.img} alt="Preview Image" />
+          <img className="imagem-content" src={props.img} alt="Preview Image" />
         </div>
         <div className="infos">
           <h2>{props.title}</h2>
