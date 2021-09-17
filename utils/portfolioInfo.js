@@ -3,7 +3,7 @@ export const projects = [
         title: "Jordan Shoes",
         description: "Loja de tênis Jordan",
         url: "https://jordan-shoes-alpha.vercel.app/",
-        img: "/jordan.png"
+        img: "https://raw.githubusercontent.com/LeSales/Personal-page/main/public/jordan.PNG"
     },
     {
         title: "Netflix clone",
