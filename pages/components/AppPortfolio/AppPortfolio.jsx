@@ -47,7 +47,6 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     //max-width: 430px;
     width: 50vw;
-    min-height: 40vh;
     max-height: 50vh;
     background-size: cover;
     border-radius: 10px;
