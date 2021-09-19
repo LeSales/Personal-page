@@ -123,17 +123,8 @@ function AppSobre() {
             Sou do Rio de Janeiro, graduando em Ciência da Computação.
             <br />
             <br />
-            Aficionado pela criação de elementos visuais agradáveis, busco
-            aprimorar cada vez mais as técnicas de UI/UX em conjunto com as boas
-            práticas de programação, para criar aplicações fluidas e de
-            excelente aparência.
-            <br />
-            <br />
-            Gosto de artes, de criar coisas novas e assistir séries com as
-            pessoas que amo. <br />
-            <br />
-            Sou uma pessoa de família e gosto de estar perto e interagir com
-            pessoas positivas.
+            Gosto muito de tecnologia e dar vida a novos projetos me traz satisfação
+            e impulsiona a aprender cada vez mais para cumprir novos desafios.
           </p>
           <h3 style={{paddingLeft:20, paddingTop:"3rem", fontSize:"2.5rem"}}>Experiências</h3>
           <p>Desenvolvedor Front-end e Mobile - Autônomo</p>
@@ -147,6 +138,7 @@ function AppSobre() {
             <li>HTML5</li>
             <li>CSS3 (SASS)</li>
             <li>Git</li>
+            <li>Api REST e GraphQL</li>
           </ul>
           <p className="subtitle">Criação de Layouts com as ferramentas:</p>
           <ul>
