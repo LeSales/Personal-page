@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { slide as Menu } from 'react-burger-menu';
 
 export const Wrapper = styled.header`
   height: 70px;
@@ -163,6 +164,10 @@ function AppHeader() {
             </li>
           </ul>
         </nav>
+        <Menu >
+        <a id="home" className="menu-item" href="/">Home</a>
+        <a id="about" className="menu-item" href="/about">About</a>
+        </Menu>
       </div>
     </Wrapper>
   );
