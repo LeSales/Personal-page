@@ -164,10 +164,6 @@ function AppHeader() {
             </li>
           </ul>
         </nav>
-        <Menu >
-        <a id="home" className="menu-item" href="/">Home</a>
-        <a id="about" className="menu-item" href="/about">About</a>
-        </Menu>
       </div>
     </Wrapper>
   );

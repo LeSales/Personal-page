@@ -3,6 +3,7 @@ import styled from "styled-components";
 import emailjs from "emailjs-com";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import EmailIcon from "@material-ui/icons/Email";
 
 const flexCenter = `
 display:flex;
@@ -38,7 +39,7 @@ export const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-width:600px;
+    min-width: 600px;
     max-width: 750px;
     max-height: 620px;
     width: 50vw;
@@ -125,7 +126,7 @@ export const Wrapper = styled.div`
     margin: 0 10px;
   }
 
-  .links:hover{
+  .links:hover {
     color: #616161 !important;
   }
 
@@ -133,36 +134,40 @@ export const Wrapper = styled.div`
     color: inherit;
   }
 
-  @media (max-width: 768px){
-    .formulario{
+  @media (max-width: 768px) {
+    .formulario {
       min-width: 90vw;
     }
-    
   }
-  a, a:hover, a:focus, a:active {
-      text-decoration: none;
-      color: inherit;
- }
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 function sendEmail(e) {
   e.preventDefault();
 
-  emailjs.sendForm(
-    "service_xed1lv3",
-    "template_vqcvu1n",
-    e.target,
-    "user_n9Joj17xPBlNCaRnoUhzK"
-  ).then(res=>{
-    console.log(res);
-  }).catch(err=> console.log(err));
+  emailjs
+    .sendForm(
+      "service_xed1lv3",
+      "template_vqcvu1n",
+      e.target,
+      "user_n9Joj17xPBlNCaRnoUhzK"
+    )
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => console.log(err));
 
   let form = document.getElementById("myForm");
   form.reset();
-  setTimeout(()=>{
+  setTimeout(() => {
     //alert("Mensagem enviada, obrigado pelo contato!");
-}, 10);
-
+  }, 10);
 }
 
 function AppContato() {
@@ -176,10 +181,15 @@ function AppContato() {
             <input className="inputField" type="text" name="name" required />
 
             <label>E-mail</label>
-            <input className="inputField" type="email" name="user_email" required />
+            <input
+              className="inputField"
+              type="email"
+              name="user_email"
+              required
+            />
 
             <label>Mensagem</label>
-            <textarea name="message" rows="5" required/>
+            <textarea name="message" rows="5" required />
             <input className="inputSubmit" type="submit" value="Enviar" />
           </form>
           <div className="separator"></div>
@@ -190,7 +200,7 @@ function AppContato() {
               rel="noopener noreferrer"
               className="links"
             >
-              <LinkedInIcon style={{fontSize:30}}/>
+              <LinkedInIcon style={{ fontSize: 30 }} />
             </a>
             <a
               href="https://github.com/LeSales"
@@ -198,7 +208,15 @@ function AppContato() {
               rel="noopener noreferrer"
               className="links"
             >
-              <GitHubIcon style={{fontSize:30}}/>
+              <GitHubIcon style={{ fontSize: 30 }} />
+            </a>
+            <a
+              href="mailto:leandrossales.96@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="links"
+            > 
+              <EmailIcon style={{ fontSize: 30 }} />
             </a>
           </div>
         </div>
